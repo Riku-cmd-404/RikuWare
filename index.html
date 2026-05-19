@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RikuWare - CS2 Cheat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0f0f0f;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1a1a1a;
+            border-bottom: 1px solid #333;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            color: #999;
+            font-size: 0.95em;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #ccc;
+            font-size: 0.95em;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #ccc;
+            font-size: 0.95em;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .feature-item {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #2a2a2a;
+        }
+
+        .feature-item h3 {
+            color: #fff;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            color: #999;
+            font-size: 0.9em;
+            margin: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 11px 28px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 10px 10px 10px 0;
+            transition: all 0.2s ease;
+            font-size: 0.95em;
+        }
+
+        .btn:hover {
+            background: #e0e0e0;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 1px solid #333;
+        }
+
+        .btn-secondary:hover {
+            border: 1px solid #666;
+            background: #1a1a1a;
+        }
+
+        .btn-download {
+            background: #2a6b2f;
+            color: #fff;
+            box-shadow: 0 0 8px rgba(42, 107, 47, 0.4);
+        }
+
+        .btn-download:hover {
+            background: #1f5423;
+            transform: translateY(-1px);
+        }
+
+        code {
+            background: #1a1a1a;
+            color: #e0e0e0;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            border: 1px solid #2a2a2a;
+        }
+
+        .code-block {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 6px;
+            padding: 20px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .code-block code {
+            background: none;
+            color: #e0e0e0;
+            padding: 0;
+            border: none;
+            display: block;
+            white-space: pre;
+        }
+
+        .warning {
+            background: #2a1a1a;
+            border-left: 3px solid #ff6b6b;
+            padding: 15px 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .warning p {
+            color: #ff9999;
+            margin: 0;
+            font-size: 0.95em;
+        }
+
+        .steps-list {
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border: 1px solid #2a2a2a;
+        }
+
+        .steps-list li {
+            margin-bottom: 12px;
+            font-size: 0.96em;
+        }
+
+        .steps-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            background: #1a1a1a;
+            border-top: 1px solid #333;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 60px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #999;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #ccc;
+        }
+
+        .divider {
+            height: 1px;
+            background: #2a2a2a;
+            margin: 40px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #2a2a2a;
+            color: #aaa;
+            font-size: 0.7em;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RikuWare</h1>
+        <p class="subtitle">Counter-Strike 2 Cheat</p>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <section>
+            <h2>About</h2>
+            <p>RikuWare is a Counter-Strike 2 cheat featuring essential gameplay enhancements. Built for stability and ease of use.</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Features Section -->
+        <section>
+            <h2>Features</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Aimbot</h3>
+                    <p>Automatic aim assistance with customizable targeting and smoothing.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>ESP</h3>
+                    <p>Real-time player detection and visualization on screen.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Triggerbot</h3>
+                    <p>Automatic fire when aim is on target with configurable delay.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>FOV Override</h3>
+                    <p>Adjust field of view settings to your preference.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Recoil Control</h3>
+                    <p>Reduce weapon recoil for improved accuracy.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>No Flash</h3>
+                    <p>Remove or reduce flash effects from grenades.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Installation Section - SIMPLIFIED 3 STEPS -->
+        <section>
+            <h2>Quick Setup <span class="badge">3 steps only</span></h2>
+            <div class="steps-list">
+                <ul style="list-style-type: none; margin-left: 0;">
+                    <li>➊ <strong>Download RikuWare.dll</strong> – Click the button below</li>
+                    <li>➋ <strong>Download Extreme Injector</strong> from official source (or any manual map injector)</li>
+                    <li>➌ <strong>Inject using Manual Map</strong> – Run injector as admin → select CS2 process → choose RikuWare.dll → inject</li>
+                </ul>
+            </div>
+            <p style="margin-top: 10px;">After injection, press <code>INSERT</code> or <code>RIGHT SHIFT</code> to open the menu.</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ONE-CLICK DOWNLOAD SECTION (DLL) -->
+        <section style="text-align: center; background: #141414; padding: 35px 20px; border-radius: 10px; border: 1px solid #2a2a2a; margin-bottom: 20px;">
+            <h2 style="margin-bottom: 12px;">⬇️ Direct Download</h2>
+            <p style="margin-bottom: 20px;">Get <strong>RikuWare.dll</strong> directly from this repository</p>
+            <a href="RikuWare.dll" download class="btn btn-download" style="font-size: 1.1rem; padding: 12px 36px;">
+                📥 Download RikuWare.dll (1 click)
+            </a>
+            <p style="margin-top: 18px; font-size: 0.85rem; color: #777;">File is hosted in the repository — click to save .dll file</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- INJECTION DETAILS (EXTREME INJECTOR + MANUAL MAP) -->
+        <section>
+            <h2>🔧 Injection Guide (Extreme Injector + Manual Map)</h2>
+            <p>Follow these steps carefully to ensure proper injection:</p>
+            <ul>
+                <li><strong>Step 1:</strong> Download <strong>Extreme Injector v3.7.3+</strong> from <code>github.com/master131/ExtremeInjector</code> or trusted source.</li>
+                <li><strong>Step 2:</strong> Run <strong>Extreme Injector.exe</strong> as <strong>Administrator</strong> (right-click → Run as administrator).</li>
+                <li><strong>Step 3:</strong> In the injector, select <strong>Counter-Strike 2</strong> from the process list (cs2.exe).</li>
+                <li><strong>Step 4:</strong> Click <strong>Add DLL</strong> and choose the downloaded <code>RikuWare.dll</code>.</li>
+                <li><strong>Step 5:</strong> Under injection settings, set <strong>Injection Method</strong> to <code>Manual Map</code>.</li>
+                <li><strong>Step 6:</strong> Click <strong>Inject</strong> — wait for confirmation sound/notification.</li>
+                <li><strong>Step 7:</strong> Launch CS2 (if not already open) and press <code>INSERT</code> or <code>RIGHT SHIFT</code> to open cheat menu.</li>
+            </ul>
+            <div class="warning" style="margin-top: 20px;">
+                <p><strong>⚠️ Important:</strong> Always use <strong>Manual Map</strong> injection mode. Standard injection may be detected. Run injector as administrator and disable antivirus temporarily if injection fails (false positives are common).</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Controls Section -->
+        <section>
+            <h2>🎮 In-Game Controls</h2>
+            <p>Menu keybinds and default shortcuts:</p>
+            <ul>
+                <li><code>INSERT</code> – Open/close main menu</li>
+                <li><code>RIGHT SHIFT</code> – Open/close main menu (alternative)</li>
+                <li><code>END</code> – Unload cheat (if supported)</li>
+            </ul>
+            <p>All features (Aimbot, ESP, Triggerbot, etc.) can be toggled inside the menu.</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- System Requirements -->
+        <section>
+            <h2>💻 System Requirements</h2>
+            <ul>
+                <li>Windows 10 or Windows 11 (64-bit)</li>
+                <li>4GB RAM minimum (8GB recommended)</li>
+                <li>Counter-Strike 2 (latest Steam version)</li>
+                <li>Administrator privileges for injector</li>
+                <li>.NET Framework 4.8+ (Extreme Injector requirement)</li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Troubleshooting -->
+        <section>
+            <h2>🛠️ Troubleshooting</h2>
+            <ul>
+                <li><strong>Injection fails?</strong> Make sure Extreme Injector is running as admin, and CS2 is not running with higher integrity. Try restarting both.</li>
+                <li><strong>Menu doesn't open?</strong> Press INSERT or RIGHT SHIFT. If nothing happens, injection might have failed. Re-inject using Manual Map.</li>
+                <li><strong>Antivirus deletes RikuWare.dll?</strong> Add an exception to your download folder or temporarily disable real-time protection (false positive due to packing).</li>
+                <li><strong>Game crashes after injection?</strong> Try different Manual Map settings (e.g., "Manual Map (No Stealth)" or "Manual Map (Extreme)".</li>
+                <li><strong>VAC warning?</strong> Cheat is not guaranteed undetected. Use on alternate accounts only.</li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Important Notice -->
+        <section>
+            <h2>⚠️ Legal & Risk Disclaimer</h2>
+            <div class="warning">
+                <p><strong>Detection Risk:</strong> RikuWare does not guarantee undetected status. Use at your own risk. The author is not responsible for VAC bans, game bans, or account restrictions.</p>
+            </div>
+            <p>This software is provided for <strong>educational purposes</strong>. Users are responsible for understanding and accepting the risks associated with using cheats in online games. Always use on private / alt accounts and never on main accounts.</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Download Section Alternative + Github -->
+        <section style="text-align: center; padding-top: 20px;">
+            <h2>📦 Repository Files</h2>
+            <p>Download the DLL directly or visit the GitHub repository for source & updates</p>
+            <a href="RikuWare.dll" download class="btn btn-download">⬇️ RikuWare.dll (one click)</a>
+            <a href="#" class="btn btn-secondary">🔗 GitHub Repository</a>
+            <p style="margin-top: 20px; font-size: 0.85rem;"><code>RikuWare.dll</code> is included in the root of this repository for easy access.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 RikuWare | <a href="#">GitHub</a> | <a href="#">Issues</a> | <a href="#">Manual Map Guide</a></p>
+        <p style="margin-top: 12px; font-size: 0.8rem;">Use responsibly. For educational research only.</p>
+    </footer>
+
+    <script>
+        // Optional: small script to verify download link exists, or just provide feedback
+        // This ensures that the download button for RikuWare.dll triggers actual file download.
+        // If file is missing, browser will fail gracefully but we add a console hint.
+        document.querySelectorAll('a[href="RikuWare.dll"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                console.log('[RikuWare] Downloading RikuWare.dll from repository root');
+                // No need to prevent default – just let the browser handle the download
+                // If the file doesn't exist, the user will get a 404, but we assume it's present.
+            });
+        });
+    </script>
+</body>
+</html>
